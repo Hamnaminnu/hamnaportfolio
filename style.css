@@ -1,0 +1,394 @@
+
+body {	
+	background: linear-gradient(to bottom, #000000, #282828, #484848, #6a6a6a, #8c8c8c );
+	background-size: 100%;
+	background-repeat: no-repeat;
+  overflow-x: hidden;
+
+}
+
+body:before{
+	content:'';
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: -1;
+	background: linear-gradient(to right bottom, rgba(255,255,255,0.2), #000000 75%);
+}
+.bubbles{
+  position: relative;
+  display: flex;
+}
+.bubbles span{
+  position: relative;
+  width: 10px;
+  height: 10px;
+  background: #191919;
+  margin: 0 4px;
+  border-radius: 50%;
+  opacity: 0.3;
+  box-shadow: 0 0 0 10px whitesmoke, 0 0 0 50px rgb(129, 129, 129),
+  0 0 0 100pxrgb(43, 43, 43);
+  animation: animate 15s linear infinite;
+  animation-duration: calc(125s / var(--i));
+}
+.bubbles span:nth-child(even){
+  background: #e2e2e2;
+  box-shadow: 0 0 0 10px whitesmoke, 0 0 0 50px rgb(129, 129, 129),
+  0 0 0 100pxrgb(43, 43, 43);
+}
+@keyframes animate {
+  0%{
+    transform: translateY(100vh) scale(0);
+  }
+  100%{
+    transform: translateY(-10vh) scale(1);
+  }
+}
+#i1{
+    color:rgb(35, 35, 35) !important;
+    font-size: 2em;
+    float: right !important;
+    /* margin-top: 4% !important;
+    margin-right: 4% !important; */
+}
+#container{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+#career{
+  animation: fade linear both; 
+
+  animation-timeline: view();
+  animation-range: entry 50% cover 50%;
+}
+#div1{
+    color: rgb(224, 222, 222) !important;
+    font-family:'Goudy Old Style' !important;
+    position: absolute;
+} 
+#h1{
+    /* font-family:'Goudy Old Style' !important; */
+    font-family: "Dancing Script", "cursive";
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 6em;
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 1;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+.glow{
+  grid-column: 1;
+  grid-row: 1;
+  z-index: 1;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+  
+@keyframes glow {
+  from {
+    text-shadow: 0 0 20px #f3efef;
+  }
+  to {
+    text-shadow: 0 0 50px #000000, 0 0 10px #000000;
+  }
+}
+#h2{
+    color: rgb(0, 0, 0) !important;
+}
+.arrow {
+    border: solid gray !important ;
+    border-width: 0 3px 3px 0 !important;
+    display: inline-block !important;
+    padding: 3px !important;
+}
+.down {
+    transform: rotate(45deg)  !important;
+    -webkit-transform: rotate(45deg) !important;
+}
+.a1{
+    text-decoration: none  !important;
+    color: white  !important;
+    font-size: larger !important;
+}
+hr{
+    color: grey !important;
+}
+h2{
+    font-size: 3em ;
+    font-family:'Goudy Old Style' !important;
+    color: rgb(0, 0, 0);
+}
+#h3{
+    font-family:'Goudy Old Style' !important;
+    font-size:2em;
+    /* font-family:Arial, sans-serif; */
+    color: rgb(230, 230, 230);
+}
+#container1{
+    width: 100vw;
+    /* height: 20vh; */
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+#about{
+  animation: fade linear both; 
+  animation-timeline: view();
+  animation-range: entry 50% cover 50%;
+  padding-top: 2%;
+    padding-left:20%;
+    padding-right: 20%;
+    padding-bottom: 5%;
+}
+
+  
+  @media screen and (max-width: 450px) {
+    .links {padding-top: 15px;overflow: hidden;}
+    .links a {font-size: 18px;}
+  }
+  .links a:hover {
+    color: #000000;
+  }
+.links{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    /* opacity: 0.3 !important; */
+    color: white !important;
+    top: 0;
+    left: 0;
+    background-color: rgb(49, 49, 49);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.links .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    color: white !important;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  .links a:hover{
+    font-weight: bolder;
+  }
+
+.row1 {
+    display: flex;
+    animation: fade linear both; 
+    animation-timeline: view();
+    animation-range: entry 50% cover 50%;
+    /* transform: translateX(400%);
+    transition: transform 0.4s ease; */
+  }
+  /* .row1:nth-of-type(even){
+    transform: translateX(-400%);
+  }
+  .row1.show{
+    transform: translateX(0);
+  } */
+  
+.column1 {
+    flex: 50%;
+  }
+  .row1 h2{
+    color: whitesmoke;
+  }
+  .row1 a{
+    color: rgb(161, 161, 161);
+  }
+  .row1 a:hover{
+    color: rgb(126, 126, 126);
+    font-weight: bolder;
+  }
+  .row1 p{
+    color: whitesmoke;
+    font-size: 1.5em;
+  }
+ @media screen and (max-width: 450px) {
+    .row1 p{
+        color: whitesmoke;
+        font-size: 1em;
+      }
+      .row1 h2{
+        color: whitesmoke;
+        font-size: 1.75em !important; 
+      }
+  }
+  .flex-container {
+    animation: fade linear both; 
+    animation-timeline: view();
+    animation-range: entry 50% cover 50%;
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .flex-item{
+    width: 300px;
+    height: 300px;
+    background-color: rgb(55, 55, 55);
+    background-position:center;
+    background-repeat: no-repeat;
+    /* background-size: 300px 300px; */
+    background-size:cover;
+    opacity: 0.75;
+    margin: 10px;
+    flex: 50%;
+    transition-delay: 1s; 
+    transition-duration: 1s;
+    transition-property: width, height, font-size;
+    /* transition: transform .2s; */
+    font-family: "cursive";
+    font-weight: bold;
+    padding: 70px 0;
+  }
+  .flex-item:hover{
+    width: 350px;
+    height: 350px;
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    font-size: 1.25em;
+    /* background-size: 350px 250px; */
+    opacity: 1;
+    /* -ms-transform: scale(1.2); 
+    -webkit-transform: scale(1.2); 
+    transform: scale(1.2);  */
+  }
+
+  .flex-item a{
+    font-size: large;
+    color: rgb(0, 0, 0);
+}
+.flex-item a:hover{
+    font-size: medium;
+    color: rgb(0, 0, 0);
+    font-size: x-large;
+    font-weight: bolder;
+}
+  @media (max-width: 800px) {
+    .flex-container {
+      flex-direction: column;
+    }
+  }
+/* 
+  hr{
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    color: whitesmoke;
+    border-width: 1px;
+  } */
+
+  .footer{
+    width: 100%;
+    border-top: 2px dotted rgb(241, 241, 241);
+    min-height:200px;
+    margin-top: 100px;
+    padding-top: 50px ;
+
+    /* background-color: rgba(82, 82, 82, 0); */
+  }
+  /* .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+  }
+  .grid-item {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  } */
+  .footer a h2{
+    font-family: "Dancing Script" !important;
+  }
+  .footer h2{
+    font-family:'Times New Roman', Times, serif!important;
+  }
+  .row2 {
+    display: flex;
+    width: 100%;
+    padding-left: 50px;
+  }
+  footer a:hover{
+    font-size: 1.25em;
+    text-decoration: none;
+    font-weight: bold;
+  }
+.column2 {
+    flex: 50%;
+    color: rgb(117, 117, 117);;
+    font-size: 2.5em;
+  }
+  .row2 h3{
+    font-style: italic;
+    color: rgb(226, 226, 226);
+  }
+  .row2 a{
+    color: rgb(197, 197, 197);
+  }
+  .row2 a:hover{
+    color: rgb(117, 117, 117);
+    font-weight: bolder;
+  }
+  @media screen and (max-width: 850px) {
+    .column2{
+        font-size: 2em;
+        padding: 20px;
+      }
+      .row2{
+        flex-direction: column;
+      }
+      .row2 h3{
+        font-size: 0.75em !important; 
+      }
+  }
+
+#good{
+  animation: fade linear both; 
+
+  animation-timeline: view();
+  animation-range: entry 50% cover 50%;
+  /* background-clip: text;
+  -webkit-background-clip: text; */
+}
+#work{
+  animation: fade linear both; 
+  animation-timeline: view();
+  animation-range: entry 50% cover 50%;
+  /* background-clip: text;
+  -webkit-background-clip: text; */
+}
+#certificate{
+  grid-column: 1;
+  grid-row: 1;
+  z-index: 1;
+  animation: fade linear both; 
+  animation-timeline: view();
+  animation-range: entry 50% cover 50%;
+  /* background-clip: text;
+  -webkit-background-clip: text; */
+}
+
+@keyframes fade{
+  from{opacity: -0.5;}
+  to{opacity: 1;}
+}
+
+
