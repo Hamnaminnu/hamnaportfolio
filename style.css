@@ -38,6 +38,13 @@ body:before{
   box-shadow: 0 0 0 10px whitesmoke, 0 0 0 50px rgb(129, 129, 129),
   0 0 0 100pxrgb(43, 43, 43);
 }
+
+@media screen and (max-width: 450px) {
+  .bubbles span{animation: none;width: 0px;
+  height: 0px;}
+  
+}
+
 @keyframes animate {
   0%{
     transform: translateY(100vh) scale(0);
@@ -220,7 +227,7 @@ h2{
       }
       .row1 h2{
         color: whitesmoke;
-        font-size: 1.75em !important; 
+        font-size: 1.5em !important; 
       }
   }
   .flex-container {
